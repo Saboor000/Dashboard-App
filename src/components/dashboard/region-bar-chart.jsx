@@ -19,15 +19,21 @@ const RegionBarChart = memo(function RegionBarChart({ data }) {
       <CardHeader>
         <CardTitle>Orders by Region</CardTitle>
       </CardHeader>
-      <CardContent className="h-80">
+      <CardContent className="h-64 p-3 pt-0 sm:h-80 sm:p-5 sm:pt-0">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={data}
-            margin={{ top: 10, right: 8, left: 4, bottom: 8 }}
+            margin={{ top: 8, right: 8, left: 0, bottom: 4 }}
           >
             <CartesianGrid strokeDasharray="4 4" stroke="#334155" />
-            <XAxis dataKey="region" tick={{ fontSize: 12, fill: "#cbd5e1" }} />
-            <YAxis tick={{ fontSize: 12, fill: "#cbd5e1" }} />
+            <XAxis
+              dataKey="region"
+              tick={{ fontSize: 12, fill: "#cbd5e1" }}
+              interval="preserveStartEnd"
+              minTickGap={18}
+              tickMargin={6}
+            />
+            <YAxis tick={{ fontSize: 12, fill: "#cbd5e1" }} width={36} />
             <Tooltip
               contentStyle={{
                 borderRadius: 12,
@@ -40,12 +46,13 @@ const RegionBarChart = memo(function RegionBarChart({ data }) {
                 "Orders",
               ]}
             />
-            <Legend />
+            <Legend wrapperStyle={{ paddingTop: 8 }} />
             <Bar
               dataKey="orders"
               name="Orders"
               fill="#0369a1"
               radius={[8, 8, 0, 0]}
+              maxBarSize={44}
               isAnimationActive
               animationDuration={450}
             />

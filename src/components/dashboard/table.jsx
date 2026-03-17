@@ -17,7 +17,7 @@ const Row = memo(function Row({ index, style, rows }) {
   return (
     <div
       style={style}
-      className="grid min-w-190 grid-cols-[1.3fr_1fr_1fr_1fr_.8fr_.8fr] items-center border-b border-slate-700 px-4 text-sm text-slate-200"
+      className="grid grid-cols-[1.3fr_1fr_1fr_1fr_.8fr_.8fr] items-center border-b border-slate-700 px-4 text-sm text-slate-200"
     >
       <span className="truncate text-slate-100">{row.product}</span>
       <span>{row.region}</span>
@@ -46,21 +46,23 @@ const VirtualizedTable = memo(function VirtualizedTable({
       </CardHeader>
       <CardContent className="space-y-2">
         <div className="overflow-x-auto rounded-lg border border-slate-700/70">
-          <div className="grid min-w-190 grid-cols-[1.3fr_1fr_1fr_1fr_.8fr_.8fr] bg-slate-800 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-slate-300">
-            <span>Product</span>
-            <span>Region</span>
-            <span>Category</span>
-            <span>Revenue</span>
-            <span>Orders</span>
-            <span>Conv.</span>
+          <div className="min-w-190">
+            <div className="grid grid-cols-[1.3fr_1fr_1fr_1fr_.8fr_.8fr] bg-slate-800 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-slate-300">
+              <span>Product</span>
+              <span>Region</span>
+              <span>Category</span>
+              <span>Revenue</span>
+              <span>Orders</span>
+              <span>Conv.</span>
+            </div>
+            <List
+              rowComponent={Row}
+              rowCount={rows.length}
+              rowHeight={itemSize}
+              rowProps={{ rows }}
+              style={{ height, width: "100%" }}
+            />
           </div>
-          <List
-            rowComponent={Row}
-            rowCount={rows.length}
-            rowHeight={itemSize}
-            rowProps={{ rows }}
-            style={{ height }}
-          />
         </div>
 
         <div className="mt-3 flex flex-col gap-3 rounded-xl border border-slate-700 bg-slate-950/80 px-4 py-3 text-sm text-slate-200 sm:flex-row sm:items-center sm:justify-between">
