@@ -1,0 +1,137 @@
+{
+  "updatedAt": "2026-03-17T23:40:00.000Z",
+  "records": [
+    {
+      "id": "rec-0001",
+      "timestamp": "2026-03-17T23:39:00.000Z",
+      "region": "North",
+      "category": "Enterprise",
+      "product": "Atlas",
+      "revenue": 6210,
+      "orders": 42,
+      "users": 210,
+      "conversionRate": 2.45
+    },
+    {
+      "id": "rec-0002",
+      "timestamp": "2026-03-17T23:38:00.000Z",
+      "region": "South",
+      "category": "SMB",
+      "product": "Nova",
+      "revenue": 4880,
+      "orders": 31,
+      "users": 176,
+      "conversionRate": 2.12
+    },
+    {
+      "id": "rec-0003",
+      "timestamp": "2026-03-17T23:37:00.000Z",
+      "region": "East",
+      "category": "Consumer",
+      "product": "Pulse",
+      "revenue": 7020,
+      "orders": 55,
+      "users": 268,
+      "conversionRate": 2.68
+    },
+    {
+      "id": "rec-0004",
+      "timestamp": "2026-03-17T23:36:00.000Z",
+      "region": "West",
+      "category": "Government",
+      "product": "Beacon",
+      "revenue": 5340,
+      "orders": 28,
+      "users": 152,
+      "conversionRate": 1.88
+    },
+    {
+      "id": "rec-0005",
+      "timestamp": "2026-03-17T23:35:00.000Z",
+      "region": "Central",
+      "category": "Enterprise",
+      "product": "Nimbus",
+      "revenue": 8100,
+      "orders": 61,
+      "users": 295,
+      "conversionRate": 2.91
+    },
+    {
+      "id": "rec-0006",
+      "timestamp": "2026-03-17T23:34:00.000Z",
+      "region": "North",
+      "category": "SMB",
+      "product": "Vertex",
+      "revenue": 4630,
+      "orders": 29,
+      "users": 168,
+      "conversionRate": 2.05
+    },
+    {
+      "id": "rec-0007",
+      "timestamp": "2026-03-17T23:33:00.000Z",
+      "region": "South",
+      "category": "Consumer",
+      "product": "Atlas",
+      "revenue": 5920,
+      "orders": 44,
+      "users": 214,
+      "conversionRate": 2.39
+    },
+    {
+      "id": "rec-0008",
+      "timestamp": "2026-03-17T23:32:00.000Z",
+      "region": "East",
+      "category": "Government",
+      "product": "Nova",
+      "revenue": 5210,
+      "orders": 26,
+      "users": 143,
+      "conversionRate": 1.72
+    },
+    {
+      "id": "rec-0009",
+      "timestamp": "2026-03-17T23:31:00.000Z",
+      "region": "West",
+      "category": "Enterprise",
+      "product": "Pulse",
+      "revenue": 7640,
+      "orders": 58,
+      "users": 281,
+      "conversionRate": 2.76
+    },
+    {
+      "id": "rec-0010",
+      "timestamp": "2026-03-17T23:30:00.000Z",
+      "region": "Central",
+      "category": "SMB",
+      "product": "Beacon",
+      "revenue": 4460,
+      "orders": 27,
+      "users": 161,
+      "conversionRate": 1.98
+    },
+    {
+      "id": "rec-0011",
+      "timestamp": "2026-03-17T23:29:00.000Z",
+      "region": "North",
+      "category": "Consumer",
+      "product": "Nimbus",
+      "revenue": 6890,
+      "orders": 52,
+      "users": 248,
+      "conversionRate": 2.61
+    },
+    {
+      "id": "rec-0012",
+      "timestamp": "2026-03-17T23:28:00.000Z",
+      "region": "South",
+      "category": "Government",
+      "product": "Vertex",
+      "revenue": 5070,
+      "orders": 25,
+      "users": 140,
+      "conversionRate": 1.69
+    }
+  ]
+}

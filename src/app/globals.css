@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  --surface: #020617;
+  --ink: #e2e8f0;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--ink);
+  background:
+    radial-gradient(
+      circle at 5% 10%,
+      rgba(14, 116, 144, 0.35) 0,
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 90% 0%,
+      rgba(15, 118, 110, 0.26) 0,
+      transparent 50%
+    ),
+    linear-gradient(180deg, #021128 0%, #03122a 42%, var(--surface) 100%);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
