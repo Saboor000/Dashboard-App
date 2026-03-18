@@ -142,9 +142,9 @@ export function Dashboard() {
     [toggleInList],
   );
 
-  const handleSearchText = useCallback((event) => {
+  const handleSearchText = useCallback((value) => {
     setCurrentPage(1);
-    setSearchText(event.target.value);
+    setSearchText(value);
   }, []);
 
   const filteredRecords = useMemo(() => {

@@ -1,9 +1,10 @@
 "use client";
 
-import { memo } from "react";
+import { memo, useState, useEffect } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { useDebounce } from "@/hooks/use-debounce";
 
 const FiltersPanel = memo(function FiltersPanel({
   regionOptions,
@@ -15,6 +16,12 @@ const FiltersPanel = memo(function FiltersPanel({
   onToggleCategory,
   onSearchTextChange,
 }) {
+  const [localSearchText, setLocalSearchText] = useState(searchText);
+  const debouncedSearchText = useDebounce(localSearchText, 300);
+
+  useEffect(() => {
+    onSearchTextChange(debouncedSearchText);
+  }, [debouncedSearchText, onSearchTextChange]);
   return (
     <Card>
       <CardHeader>
@@ -26,8 +33,8 @@ const FiltersPanel = memo(function FiltersPanel({
             Search product
           </p>
           <Input
-            value={searchText}
-            onChange={onSearchTextChange}
+            value={localSearchText}
+            onChange={(e) => setLocalSearchText(e.target.value)}
             placeholder="Type to filter products..."
           />
         </div>
